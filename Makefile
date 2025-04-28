@@ -6,9 +6,9 @@ install-go:
 install-docker:
 	@echo "Install Docker Desktop from https://www.docker.com/products/docker-desktop/ depending on your OS."
 
-# Start Redis and Postgres using Docker Compose
+# Start Redis and Postgres using Docker Compose command on the file within /setup folder
 start-docker:
-	docker compose up -d
+	docker-compose -f setup/docker-compose.yml up -d
 
 # Build the Go app (works both for Windows and Linux/Mac)
 build:
